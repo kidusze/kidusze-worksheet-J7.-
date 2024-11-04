@@ -8,4 +8,41 @@
 
 5. An IP address is a numerical code that uniquely identifies a device on the internet, while a domain name is a human-readable name associated with that IP address
 
-6. It used it to identify specific applications or services running on a computer. The port address is a way for the Operating System to divide up the data arriving from the network based on the destination process. In the operating systemt the port tells it to through a certain path to get it to the right destination."The purpose to allow th einternet traffic to got to individual ports".
+6. It used it to identify specific applications or services running on a computer. The port address is a way for the Operating System to divide up the data arriving from the network based on the destination process. In the operating systemt the port tells it to through a certain path to get it to the right destination."The purpose to allow th einternet traffic to got to individual ports". (route traffic to the right application)
+
+7.
+```java
+import java.util.*;
+import java.net.*;
+import java.io.*;
+
+public class HelloSocket{
+
+    public static void main(String args[]){
+
+        Socket sock=null;        
+        try{
+           sock = new Socket(123.45.678.900,4040);
+        }catch(Exception e){
+            System.err.println("Cannot Connect");
+            System.exit(1);
+        }
+
+        try{
+            PrintWriter pw = new PrintWriter(sock.getOutputStream());
+            pw.println("red");
+            pw.close(); //close the stream
+            sock.close();//close the socket
+        }catch(Exception e){
+            System.err.print("IOException");
+            System.exit(1);
+        }
+
+    }
+}
+
+
+
+
+```
+   
