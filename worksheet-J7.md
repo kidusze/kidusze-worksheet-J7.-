@@ -31,7 +31,9 @@ public class HelloSocket{
         try{
             PrintWriter pw = new PrintWriter(sock.getOutputStream());
             pw.println("red");
+            pw.flush(); // Bufferr maybe print a bunch of things but it takes a while so you can flush to send them on time
             pw.close(); //close the stream
+            in.close();
             sock.close();//close the socket
         }catch(Exception e){
             System.err.print("IOException");
@@ -40,9 +42,10 @@ public class HelloSocket{
 
     }
 }
-
-
-
-
 ```
+8.  InputStream:- read data from the source once at a time. OutputStream:- write data to the destination once at a time.
+
+9.  A Socket it acts as  a communication endpoint on a network, representing a single connection between two devices, while a SocketServer is a framework that allows you to create a server application which can listen for and manage multiple incoming connections on a specific port. One makes the clinet and the other makes he server. They both have an ip address and socket server has accept which takes as many connections as possible that is there difference.
+
+10.  Threads are useful for servers because they allow a server to handle multiple requests at the same time, which improves performance and responsiveness.     If we allow thread to handle this connections we can have a parallixed connections.
    
