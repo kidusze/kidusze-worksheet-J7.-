@@ -4,7 +4,7 @@
 
 3. The transport layer in the TCP/IP protocol (can i be reliable and drop a packet or do i need to accoutnfor evey packet)is responsible for establishing a reliable connection between two devices, ensuring data is delivered in the correct order and without errors, by managing the flow of data between applications on different hosts, including error detection, retransmission, and sequencing. As a client, I need to specify the destination port number to identify the specific application on the receiving device you want to communicate with.
 
-4. The main difference between SMTP and HTTP is that SMTP is used to transmit emails, while HTTP is used to transmit information between a client and a web server. SMTP is used to transmit email messages and HTTP is used to download web content and BitTorrent is used to pirate music and videos  HTTP is used for web pages and websites and SMTP is for emails.
+4. The main difference between SMTP and HTTP is that SMTP is used to transmit emails, while HTTP is used to transmit information between a client and a web server.HTTP is used for web pages and websites and SMTP is for emails.
 
 5. An IP address is a numerical code that uniquely identifies a device on the internet, while a domain name is a human-readable name associated with that IP address
 
@@ -42,10 +42,11 @@ public class HelloSocket{
 
     }
 }
+
 ```
 8.  InputStream:- read data from the source once at a time. OutputStream:- write data to the destination once at a time.
 
-9.  A Socket it acts as  a communication endpoint on a network, representing a single connection between two devices, while a SocketServer is a framework that allows you to create a server application which can listen for and manage multiple incoming connections on a specific port. One makes the clinet and the other makes he server. They both have an ip address and socket server has accept which takes as many connections as possible that is there difference.
+9.  A Socket it acts as  a communication endpoint on a network, representing a single connection between two devices, while a SocketServer is a framework that allows you to create a server application which can listen for and manage multiple incoming connections on a specific port. One makes the clinet and the other makes The server. They both have an ip address and socket server has accept() which takes as many connections as possible that is there difference.
 
-10.  Threads are useful for servers because they allow a server to handle multiple requests at the same time, which improves performance and responsiveness.     If we allow thread to handle this connections we can have a parallixed connections.
+10.  Threads are useful for servers because they allow a server to handle multiple requests at the same time, which improves performance and responsiveness. If we allow thread to handle this connections we can have a parallized connections.
    
